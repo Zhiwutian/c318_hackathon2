@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+body {
+
+    font-size: 0;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: relative;
+
+}
+
+.header {
+    display: inherit;
+    position: relative;
+    text-align: center;
+    height: 15%;
+    width: 100%;
+}
+
+.mainDisplayDiv {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    height: 70%;
+    width: 70%;
+    left: 15%;
+
+}
+
+.footer {
+    display: inherit;
+    position: relative;
+    height: 15%;
+    width: 100%
+}
+
+.sunDiv {
+    display: inherit;
+    position: relative;
+    height: 72%;
+    width: 37%;
+    top: 48%;
+    right: 13%;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.mercuryDiv {
+    display: inherit;
+    position: relative;
+    height: 10%;
+    width: 6%;
+    border-radius: 50%;
+    top: 3%;
+    right: 12%;
+    background-color: #6a6969;
+}
+
+
+.venusDiv {
+    display: inherit;
+    position: relative;
+    height: 12%;
+    width: 7%;
+    border-radius: 50%;
+    top: 8%;
+    right: 8%;
+    background-color: greenyellow;
+
+}
+
+.earthDiv {
+    display: inherit;
+    position: relative;
+    height: 13%;
+    width: 7%;
+    border-radius: 50%;
+    left: -9%;
+    bottom: 20%;
+    background-color: #66afe9;
+}
+
+
+.marsDiv {
+    display: inherit;
+    position: relative;
+    height: 9%;
+    width: 5%;
+    top: 6%;
+    right: 4%;
+    background-color: red;
+    border-radius: 50%;
+
+
+}
+
+.jupiterDiv {
+    display: inherit;
+    position: relative;
+    height: 28%;
+    width: 16%;
+    background-color: orange;
+    left: -6%;
+    border-radius: 50%;
+    bottom: 35%;
+}
+
+.saturnDiv {
+    display: inherit;
+    position: relative;
+    height: 22%;
+    width: 12%;
+    border-radius: 50%;
+    background-color: lightyellow;
+}
+
+.uranusDiv {
+    display: inherit;
+    position: relative;
+    height: 15%;
+    width: 8%;
+    left: 82%;
+    bottom: 69%;
+    border-radius: 50%;
+    background-color: darkgray;
+}
+
+.neptuneDiv {
+    display: inherit;
+    position: relative;
+    height: 15%;
+    width: 8%;
+    left: 83.5%;
+    border-radius: 50%;
+    background-color: lightblue;
+    bottom:53%;
+}
+
+.displayModal {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    height: 70%;
+    width: 50%;
+    background-color: rgba(157, 157, 157, 0.51);
+    z-index: 10;
+    bottom: 15%;
+    border-radius: 15%;
+    left: 25%;
+}
+
+.modalControls {
+    display: block;
+    position: relative;
+    height: 15%;
+    width: 100%;
+    top: 85%;
+}
+
+.buttons {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    height: 50%;
+    width: 25%;
+    left: 12%;
+    top: 25%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
