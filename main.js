@@ -39,14 +39,13 @@ function displayPlanetInfo(){
 function getDataFromYoutube(planetInfo) {
     console.log('get data running');
     console.log(planetInfo);
-    for (let eachBody in solarBodies){
         var youtubeAjaxObject = {
             'dataType': 'json',
             'url': 'http://s-apis.learningfuze.com/hackathon/youtube/search.php',
             'method': 'POST',
             'timeout': 3000,
             'data': {
-                'q': 'solar system ' + eachBody,
+                'q': 'solar system ' + planetInfo,
                 'maxResults': 3,
                 'type': 'video',
                 'detailLevel': 'verbose'
@@ -54,7 +53,7 @@ function getDataFromYoutube(planetInfo) {
             'success': function (result) {
                 var currentSolarBodiesArr = Object.keys(result.data);
                 console.log(Object.keys(result.data));
-                solarBodies[eachBody].videos = currentSolarBodiesArr;
+                solarBodies.planetInfo = currentSolarBodiesArr;
                 //function to display videos in the modal
                 renderVideosOnModal(currentSolarBodiesArr);
             },
@@ -63,7 +62,6 @@ function getDataFromYoutube(planetInfo) {
             }
         };
     $.ajax(youtubeAjaxObject);
-    }
 }
 
 // function renderVideoLinksOnDom(solarBodyVideoArray, planet) {
@@ -138,7 +136,6 @@ function loadAndPlayVideo(link, planet){
 
 
 function renderPlanetInfoInModal(planet){
-    console.log(planet);
     $("#displayModal").empty();
 
     var planetInfo = solarBodies[planet];
@@ -165,7 +162,9 @@ function renderPlanetInfoInModal(planet){
         "id" : "imageButton",
         text: "Images",
         "on": {
-            click: imagesButtonHandler
+            click: function() {
+                imagesButtonHandler(planet)
+            }
         }
 
     });
@@ -182,7 +181,9 @@ function renderPlanetInfoInModal(planet){
         "id" : "videoButton",
 
         "on" : {
-            'click': videoButtonHandler
+            'click': function() {
+                videoButtonHandler(planet)
+            }
 
         },
         text: "Videos"
@@ -247,8 +248,9 @@ function imagesButtonHandler() {
 
 }
 
-function videoButtonHandler() {
-    getDataFromYoutube (planetInfo)
+function videoButtonHandler(planet) {
+    getDataFromYoutube (planet);
+    // console.log(planet)
 }
 
 
