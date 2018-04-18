@@ -221,7 +221,7 @@ function renderPlanetInfoInModal(planet){
     });
     for(let videoCodeIterator=0; videoCodeIterator<planetInfo.videos.length; videoCodeIterator++){
         var videoLink = $("<li>", {
-            text: 'video '+videoCodeIterator,
+            text: 'video '+videoCodeIterator+1,
             on: {
                 click: function(){
                     loadAndPlayVideo(planetInfo.videos[videoCodeIterator]);
@@ -283,7 +283,7 @@ function getWikiText(planet) {
             // console.log(data);
             // var solarBodies = {
             //     "sun":{ wikiLink: null, videos: [], nasaText: ''},
-            solarBodies[planet].wikiLink='https://en.wikipedia.org/wiki/'+planet
+            solarBodies[planet].wikiLink='https://en.wikipedia.org/wiki/'+planet;
             parseWikiText(data)
         
             },
